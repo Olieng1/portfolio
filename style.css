@@ -213,10 +213,20 @@ html, body{
     .img-banner2 {
         max-width: 550px;
     }
-
+    .main-about h1 {
+        display: inline-block;
+        font-size: 200%;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        margin: 0;
+    }
+    .main-about a {
+        font-size: 25px;
+        font-family: "Kanit", sans-serif;
+        font-weight: 100;
+        margin: 5px;
+    }
 }
-
-
 .about {
     background-color: #1b1b1b;
     display: block;
