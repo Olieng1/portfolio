@@ -5,8 +5,7 @@ html, body{
     padding: 0%;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    background-color: #0D0D0D;
 }
 
 .header {
@@ -266,8 +265,6 @@ html, body{
     justify-items: center;
     align-items: center;
     background-color:#0D0D0D;
-    display: block;
-    height: auto;
     min-height: 110vh;
 }
 .main-about {
@@ -410,23 +407,25 @@ ul:hover ~ .cursor {
 }
 .bg-project {
   background-color: #0D0D0D;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-items: center;
+  align-content : center;
+  height: 110vh;
   width: 100%;
 }
 
-.bg-project ul{
-  margin: 0%;
-  padding: 0%;
+.bg-project .text-project{
   font-family: "Kanit", sans-serif;
   font-weight: 500;
-  font-size: 25px;
-  color: #fff;
+  font-size: 50px;
+  color: #f7f7f7;
+  width: 80%;
+}
+.project-list{
+  justify-content: center;
+  align-items: center;
 }
 .wrapper {
   width: 80%;
-  height: 100%;
 }
 
 .project {
@@ -493,6 +492,7 @@ ul:hover ~ .cursor {
   color: #000000;
 }
 .footer-about{
+  background-color: aliceblue;
   grid-area: "top";
   display: block;
   justify-items: center;
