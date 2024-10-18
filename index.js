@@ -1,10 +1,57 @@
-const menu = document.querySelectorAll('.menu');
-menu.forEach(item => {
-  item.addEventListener('click', () => {
-    const dropdown = document.querySelector('.dropdown_menu');
-    dropdown.classList.toggle('show');
+document.addEventListener('DOMContentLoaded', function() {
+  const menus = document.querySelectorAll('.menu'); // ค้นหาเมนูทั้งหมด
+  const dropdown = document.querySelector('.dropdown_menu'); // ค้นหาเมนูดรอปดาวน์เดียว
+
+  // สร้าง Timeline
+  let t1 = gsap.timeline({ paused: true });
+
+  // การตั้งค่าการขยายความสูง
+  t1.to(dropdown, {
+      height: '100%', // ขยายความสูงอัตโนมัติ
+      duration: 0.5,
+      ease: "expo.inOut",
+      onStart: () => {
+          dropdown.style.display = 'block'; // แสดงเมนูเมื่อเริ่มเปิด
+      },
+      onComplete: () => {
+          // ทำให้ลิงก์โปร่งใส
+          gsap.to(dropdown.querySelectorAll('.nav-item a'), {
+              opacity: 1,
+              transform: 'translateY(0)', // ย้ายลิงก์ไปที่ตำแหน่งเริ่มต้น
+              duration: 0.5,
+              stagger: 0.1,
+          });
+      }
+  });
+
+  // การเปิด/ปิดเมนูเมื่อคลิก
+  menus.forEach(menu => {
+      menu.addEventListener('click', function() {
+          if (dropdown.offsetHeight === 0) {
+              t1.play(); // เปิดเมนู
+          } else {
+              t1.reverse(); // ปิดเมนู
+              
+              // หน่วงเวลาให้เมนูหายไป
+              t1.eventCallback("onReverseComplete", () => {
+                  setTimeout(() => {
+                      dropdown.style.display = 'none'; // เปลี่ยน display เป็น none หลังจากปิดเสร็จ
+                  }, 300); // 300ms เป็นเวลาที่คุณต้องการให้ดีเลย์
+              });
+              
+              // รีเซ็ตลิงก์เมื่อปิด
+              gsap.set(dropdown.querySelectorAll('.nav-item a'), {
+                  opacity: 0, // รีเซ็ตความโปร่งใสเป็น 0
+                  transform: 'translateY(-20px)', // รีเซ็ตตำแหน่ง
+                  duration: 0.5,
+                  stagger: -0.1,
+              });
+          }
+      });
   });
 });
+
+
 ///////////////////////////////////////////////////////////
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', (e) =>{
@@ -58,6 +105,8 @@ window.addEventListener('scroll', function() {
     gsap.to(marquee, {
       timeScale: 1, 
     });
-  }, 300);
+  }, 200);
 });
 ///////////////////////////////////////////////////////////
+
+
