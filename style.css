@@ -5,6 +5,8 @@ html, body{
     padding: 0%;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -260,7 +262,9 @@ html, body{
     }
 }
 .about {
-    place-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     background-color:#0D0D0D;
     display: block;
     height: auto;
@@ -273,8 +277,6 @@ html, body{
     display: block;
     flex-direction: column;
     top:0;
-    max-width: 500px;
-    height: auto;
     text-align: center;
 }
 .main-about ul {
