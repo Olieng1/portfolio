@@ -8,6 +8,7 @@ html, body{
 }
 
 .header {
+  width: device-width;
     background-color: #f7f7f700;
     height: 100px;
     position: fixed;
@@ -108,6 +109,7 @@ html, body{
     position: relative;
     display: flex;
     background-image: url('7a5e8efa4d7644e054fb4e4517c8bf00.jpg');
+    object-fit: cover;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -217,7 +219,7 @@ html, body{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 560px){
     .cursor {
       display: none;
     }
@@ -333,7 +335,7 @@ html, body{
   z-index: 1;
   color: #f7f7f7;
 }
-.magnetic-btn::after {
+.magnetic-btn:after {
   content: "";
   position: relative;
   z-index: 0;
@@ -344,18 +346,17 @@ html, body{
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .magnetic-btn:hover {
-    border-color: transparent;
-  }
-  .magnetic-btn:hover::after {
-    width: 100%;
-    height: 100%;
-  }
-  .magnetic-btn:hover .text.foreground-text {
-    opacity: 1;
-  }
+.magnetic-btn:hover {
+  border-color: transparent;
 }
+.magnetic-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.magnetic-btn:hover .text.foreground-text {
+  opacity: 1;
+}
+
 .cursor{
     display: block;
     position: fixed;
@@ -372,7 +373,7 @@ ul:hover ~ .cursor {
     transform: scale(6) ;
     
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 560px) {
   .cursor {
     display: none;
   }
@@ -509,4 +510,3 @@ ul:hover ~ .cursor {
   justify-content: center;
   align-items: center;
 }
-

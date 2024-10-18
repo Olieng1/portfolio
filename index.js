@@ -108,5 +108,20 @@ window.addEventListener('scroll', function() {
   }, 200);
 });
 ///////////////////////////////////////////////////////////
-
+document.querySelectorAll(".magnetic-btn").forEach(function(button) {
+  button.addEventListener("click", function() {
+      // ตั้งดีเลย์ 3 วินาที ก่อนเปลี่ยนเส้นทาง
+      setTimeout(function() {
+          window.location.href = "index.html"; // URL ที่ต้องการเปลี่ยน
+      }, 600); // หน่วงเวลา 3 วินาที (3000 milliseconds)
+  });
+});
+document.querySelectorAll(".item").forEach(function(button) {
+  button.addEventListener("click", function() {
+      // ตั้งดีเลย์ 3 วินาที ก่อนเปลี่ยนเส้นทาง
+      setTimeout(function() {
+          window.location.href = "index.html"; // URL ที่ต้องการเปลี่ยน
+      }, 600); // หน่วงเวลา 3 วินาที (3000 milliseconds)
+  });
+});
 
