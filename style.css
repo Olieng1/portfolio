@@ -260,7 +260,7 @@ html, body{
     }
 }
 .about {
-    margin: 0%;
+    margin: 0 auto;
     padding: 0%;
     justify-items: center;
     align-items: center;
@@ -312,6 +312,7 @@ html, body{
 	}
 }
 .magnetic-btn {
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -431,6 +432,7 @@ ul:hover ~ .cursor {
 
 .project {
   border-bottom: 1px solid #ffffff60;
+  margin: 0 auto;
   padding: 12px;
   display: flex;
   align-items: center;
