@@ -260,8 +260,6 @@ html, body{
     }
 }
 .about {
-    margin: 0 auto;
-    padding: 0%;
     place-items: center;
     background-color:#0D0D0D;
     display: block;
