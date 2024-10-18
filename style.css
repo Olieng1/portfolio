@@ -261,11 +261,12 @@ html, body{
     }
 }
 .about {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    background-color:#0D0D0D;
-    min-height: 110vh;
+  justify-items: center;
+  align-content : center;
+  justify-content: center;
+  align-items: center;
+  background-color:#0D0D0D;
+  min-height: 110vh;
 }
 .main-about {
     margin-inline: 1.5rem;
@@ -409,6 +410,8 @@ ul:hover ~ .cursor {
   background-color: #0D0D0D;
   justify-items: center;
   align-content : center;
+  justify-content: center;
+  align-items: center;
   height: 110vh;
   width: 100%;
 }
