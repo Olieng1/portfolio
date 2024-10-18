@@ -265,6 +265,7 @@ html, body{
   align-content : center;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color:#0D0D0D;
   min-height: 110vh;
 }
