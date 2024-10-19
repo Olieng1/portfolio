@@ -19,7 +19,7 @@ html, body{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'left middle right';
-    z-index: 3;
+    z-index: 4;
 
 }
 
@@ -119,6 +119,7 @@ html, body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 3;
 }
 
 .main-banner .img {
@@ -264,19 +265,17 @@ html, body{
   position: relative;
   display: flex;       
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  align-items: center;
   background-color:#0D0D0D;
   min-height: 110vh;
 }
 .main-about {
-    margin-inline: 1.5rem;
-    padding-block: 5rem;
-    color: #ffffff;
-    display: block;
-    flex-direction: column;
-    top:0;
-    text-align: center;
+  width: 50%;
+  color: #ffffff;
+  display: block;
+  text-align: center;
 }
 .main-about ul {
   margin: 0%;
@@ -309,8 +308,19 @@ html, body{
 		transform: translateY(0);
 	}
 }
-
+.button {
+  top:0;
+  margin: 0;
+  padding: 0;
+  display: flex;       
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height:auto;
+}
 .magnetic-btn {
+  margin: 0%;
+  padding: 0%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,13 +341,13 @@ html, body{
 }
 .magnetic-btn .foreground-text {
   opacity: 0;
-  z-index: 1;
+  z-index: 4;
   color: #f7f7f7;
 }
 .magnetic-btn:after {
   content: "";
   position: relative;
-  z-index: 0;
+  z-index: 3;
   width: 0;
   height: 0;
   border-radius: 50%;
@@ -367,6 +377,7 @@ html, body{
     transition: transform 0.3s ease;
     pointer-events: none;
     mix-blend-mode: difference;
+    z-index: 2;
 }
 ul:hover ~ .cursor {
     transform: scale(6) ;
@@ -375,6 +386,12 @@ ul:hover ~ .cursor {
 @media screen and (max-width: 560px) {
   .cursor {
     display: none;
+  }
+  .main-about {
+    width: 90%;
+    color: #ffffff;
+    display: block;
+    text-align: center;
   }
 }
 .project-title{
