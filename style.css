@@ -266,6 +266,7 @@ html, body{
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0 auto;
   background-color:#0D0D0D;
   min-height: 110vh;
 }
@@ -409,30 +410,27 @@ ul:hover ~ .cursor {
 }
 .bg-project {
   background-color: #0D0D0D;
-  justify-items: center;
-  align-content : center;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   height: 110vh;
   width: 100%;
 }
 
 .bg-project .text-project{
+  margin: 0 auto;
   font-family: "Kanit", sans-serif;
   font-weight: 500;
   font-size: 50px;
   color: #f7f7f7;
   width: 80%;
 }
-.project-list{
-  justify-content: center;
-  align-items: center;
-}
+
 .wrapper {
+  margin: 0 auto;
   width: 80%;
 }
 
 .project {
+  display: flex;
   border-bottom: 1px solid #ffffff60;
   padding: 12px;
   display: flex;
