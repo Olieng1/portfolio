@@ -297,6 +297,15 @@ html, body{
     animation: myAnim 2s ease 0s ;
     animation-timeline:view();
 }
+.button {
+  display: flex;       
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height:auto;
+  animation: myAnim 2s ease 0s ;
+  animation-timeline:view();
+}
 @keyframes myAnim {
 	0% {
 		opacity: 0;
@@ -307,13 +316,6 @@ html, body{
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-.button {
-  display: flex;       
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height:auto;
 }
 .magnetic-btn {
   margin: 0%;
