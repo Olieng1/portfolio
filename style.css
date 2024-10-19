@@ -261,12 +261,7 @@ html, body{
     }
 }
 .about {
-  justify-items: center;
-  align-content : center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
+  transform: translate(-50%, -50%);
   background-color:#0D0D0D;
   min-height: 110vh;
 }
@@ -311,7 +306,7 @@ html, body{
 	}
 }
 .magnetic-btn {
-  padding:0 auto;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
