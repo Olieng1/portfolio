@@ -261,6 +261,10 @@ html, body{
     }
 }
 .about {
+  display: flex;       
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-color:#0D0D0D;
   min-height: 110vh;
 }
@@ -304,12 +308,7 @@ html, body{
 		transform: translateY(0);
 	}
 }
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+
 .magnetic-btn {
   display: flex;
   align-items: center;
