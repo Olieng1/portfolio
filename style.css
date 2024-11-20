@@ -264,12 +264,10 @@ html, body{
 .about {
   position: relative;
   display: flex;       
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color:#0D0D0D;
-  min-height: 110vh;
-  gap: 20px;
+  min-height: 100%;
 }
 .main-about {
   width: 50%;
@@ -301,7 +299,6 @@ html, body{
   display: flex;       
   align-items: center;
   justify-content: center;
-  width: 100%;
   height:auto;
   animation: myAnim 2s ease 0s ;
   animation-timeline:view();
@@ -526,4 +523,7 @@ ul:hover ~ .cursor {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.icon i:hover{
+  transform: scale(1.5);
 }
