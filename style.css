@@ -270,6 +270,7 @@ a {
   align-items: center;
   background-color:#0D0D0D;
   min-height: 100%;
+  flex-wrap: wrap;
 }
 .main-about {
   width: 50%;
